@@ -10,7 +10,11 @@ jobs:
   build-and-deploy:
     runs-on: self-hosted # Use your self-hosted runner
     environment: production # Optional: define an environment
-
+    permissions:
+        contents: read
+        packages: write
+        attestations: write
+        id-token: write
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
