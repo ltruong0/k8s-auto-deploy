@@ -8,6 +8,6 @@ spec:
     app: k8s-hello-world
   ports:
     - protocol: TCP
-      port: 80 # External port
+      port: 9080 # External port
       targetPort: 3000 # Container port
   type: LoadBalancer # Rancher Desktop will provide an external IP for this
