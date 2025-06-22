@@ -1,0 +1,25 @@
+# kubernetes/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-hello-world-deployment
+  labels:
+    app: k8s-hello-world
+spec:
+  replicas: 2 # You can change this
+  selector:
+    matchLabels:
+      app: k8s-hello-world
+  template:
+    metadata:
+      labels:
+        app: k8s-hello-world
+    spec:
+      containers:
+      - name: k8s-hello-world
+        image: ghcr.io/ltruong0/k8s-auto-deploy:latest # This will be replaced by the GitHub Actions workflow
+        ports:
+        - containerPort: 3000
+        env:
+        - name: MESSAGE
+          value: "Hello from CI/CD-powered Kubernetes!"

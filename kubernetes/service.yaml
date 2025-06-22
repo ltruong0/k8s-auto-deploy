@@ -1,0 +1,13 @@
+# kubernetes/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8s-hello-world-service
+spec:
+  selector:
+    app: k8s-hello-world
+  ports:
+    - protocol: TCP
+      port: 80 # External port
+      targetPort: 3000 # Container port
+  type: LoadBalancer # Rancher Desktop will provide an external IP for this
