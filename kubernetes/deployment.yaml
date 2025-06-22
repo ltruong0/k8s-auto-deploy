@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: k8s-hello-world
-        image: ghcr.io/ltruong0/k8s-auto-deploy:latest # This will be replaced by the GitHub Actions workflow
+        image: ghcr.io/YOUR_USERNAME/k8s-auto-deploy:latest # This will be replaced by the GitHub Actions workflow
         ports:
         - containerPort: 3000
         env:
