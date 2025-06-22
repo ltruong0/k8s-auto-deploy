@@ -62,4 +62,4 @@ jobs:
         kubectl apply -f kubernetes/service.yaml
         kubectl rollout status deployment/k8s-hello-world-deployment
       env:
-        KUBECONFIG: /Users/YOUR_RUNNER_USERNAME/.kube/config # Important: Set this to the actual path for the runner user
+        KUBECONFIG: /Users/leetruong/.kube/config # Important: Set this to the actual path for the runner user
